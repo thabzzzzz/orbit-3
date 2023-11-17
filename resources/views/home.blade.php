@@ -15,6 +15,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <br>
+                    <div>
+                        <a href="{{url('/client')}}">Main page</a>
+                    </div>
+                    
                 </div>
             </div>
         </div>

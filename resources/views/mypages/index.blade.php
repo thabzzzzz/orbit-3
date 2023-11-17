@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>orbit</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
+    
+<div class="container">
     <h1>Clients</h1>
     <div><a href="{{route('client.create')}}">Register new user</a></div>
     <div>
-        <table border="1">
+        <table class="table">
             <tr>
             <th>Name</th>
             <th>Email</th>
@@ -31,10 +27,10 @@
             @endforeach
         
         </table>
-        <hr>
-        <br>
+        <hr class="style-two">
+       
         <div><a href="{{route('client.createitem')}}">Create new item</a></div>
-        <table border="1">
+        <table class="table">
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -68,5 +64,5 @@
         </table>
 
     </div>
-</body>
-</html>
+</div>
+    @endsection

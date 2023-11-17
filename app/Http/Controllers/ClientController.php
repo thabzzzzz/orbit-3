@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Client;
 use App\Models\Item;
@@ -54,7 +55,7 @@ class ClientController extends Controller
             
 
         ]);
-
+        
         $newClient = Item::create($data);
         return redirect()->back()->with('message', 'Item added to list');
     }

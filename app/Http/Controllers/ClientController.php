@@ -44,19 +44,33 @@ class ClientController extends Controller
     }
 
     public function storeitem(Request $request){
-        $data = $request->validate([
-
-            'client'=>'required',
+        
+        $this->validate(request(), [
+            
             'iname'=>'required',
             'price'=>'required|decimal:0,2',
             'itemimage'=>'required',
             'itemsite'=>'required',
             'description'=>'required',
-            
-
         ]);
         
-        $newClient = Item::create($data);
+        $item = new Item;
+        
+        $item->client = Auth::user()->name ;
+        $item->iname = request('iname');
+        $item->price = request('price');
+        $item->itemimage = request('itemimage');
+        $item->itemsite = request('itemsite');
+        $item->description = request('description');
+
+        // $item->image = request()->file('image')->store('public/images');
+        $item->save();
+
+
+
+      
+        
+        
         return redirect()->back()->with('message', 'Item added to list');
     }
 

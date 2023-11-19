@@ -36,6 +36,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Image</th>
+                <th>Description</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -45,7 +46,7 @@
                     <td>{{$item->iname}}</td>
                     <td>{{$item->price}}</td>
                     <td>{{$item->itemimage}}</td>
-
+                    <td>{{$item->description}}</td>
                     <td>
                         <a href="{{route('item.edit',['item'=>$item])}}">Edit</a>
                     </td>

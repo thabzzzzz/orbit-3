@@ -14,7 +14,9 @@ class ClientController extends Controller
     
     public function index(){
         $clients=Client::all();
-        $items=Item::all();
+        $items=Item::where('client', Auth::user()->name )->get();;
+
+
         return view('mypages.index',['clients'=>$clients],['items'=>$items]); //local page file path + pass clients sql rows to loop over in html page
        
     }
@@ -45,33 +47,85 @@ class ClientController extends Controller
 
     public function storeitem(Request $request){
         
-        $this->validate(request(), [
+     /*    $this->validate(request(), [
             
             'iname'=>'required',
             'price'=>'required|decimal:0,2',
-            'itemimage'=>'required',
+            
             'itemsite'=>'required',
             'description'=>'required',
-        ]);
+            
+        ]); */
         
-        $item = new Item;
+      /*   $item = new Item;
         
         $item->client = Auth::user()->name ;
         $item->iname = request('iname');
         $item->price = request('price');
-        $item->itemimage = request('itemimage');
+        
         $item->itemsite = request('itemsite');
         $item->description = request('description');
-
-        // $item->image = request()->file('image')->store('public/images');
-        $item->save();
+        
+        
+     
+       
+            $item->itemimage = 'none'; */
+        
+         
+           
+      
+            
+        //$item->save();
 
 
 
       
         
         
-        return redirect()->back()->with('message', 'Item added to list');
+       /*  return redirect()->back()->with('message', 'Item added to list'); */
+
+
+         // Validate the request - ensure it's an image and meets any other criteria
+    $request->validate([
+        'iname' => 'required|string|max:255',
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Example validation rules
+    ]);
+
+    $name = $request->input('iname');
+
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
+
+
+
+
+        // Generate a unique name for the file to prevent collisions
+        $imageName = time() . '_' . $image->getClientOriginalName();
+
+        // Move the file to the desired directory within the public folder
+        $image->move(public_path('uploads'), $imageName);
+
+        // Optionally, you can save the $imageName and $name in the database
+        // For example, if you have a 'data' table with 'name' and 'image_path' columns
+        // Data::create(['name' => $name, 'image_path' => $imageName]);
+
+        // You can also return a success message or redirect somewhere
+        $item = new Item;
+        $item->iname=request('iname');
+        $item->client = Auth::user()->name ;
+      
+        $item->price = request('price');
+        
+        $item->itemsite = request('itemsite');
+        $item->description = request('description');
+
+        $item->itemimage =$imageName;
+        $item->save();
+        return redirect()->back()->with('success', 'Data uploaded successfully!');
+    }
+
+    // Handle if no image file was found in the request
+    return redirect()->back()->with('error', 'No image found to upload.');
     }
 
 

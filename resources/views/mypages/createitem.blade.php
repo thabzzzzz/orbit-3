@@ -15,29 +15,21 @@
   
   <div class="container">
 <h1>Create item</h1>
-<form method="post" action="{{route('client.storeitem')}}">
+
+
+{{-- <form method="post" action="{{route('client.storeitem')}}" enctype="multipart/form-data">
     @csrf
     @method('post')
 
-    <div>
-        <label for="client">client</label>
-        <input type="text" placeholder="client" name="client">
-    </div>
+   
 
-    <div>
-        <label for="iname">Name</label>
-        <input type="text" placeholder="iname" name="iname">
-    </div>
+   
 
     <div>
         <label for="price">Price</label>
         <input type="text" placeholder="price" name="price">
     </div>
 
-    <div>
-        <label for="itemimage">Item image</label>
-        <input type="text" placeholder="itemimage" name="itemimage">
-    </div>
 
   
 
@@ -51,12 +43,47 @@
         <input type="text" placeholder="description" name="description">
     </div>
 
-    
+    <label for="avatar">Choose a profile picture:</label>
+
+<input type="file" id="image" name="itemimage"  />
 
     <div>
         <input type="submit" value="upload">
     </div>
+</form> --}}
+
+<form class="w-px-500 p-3 p-md-3" action="{{ route('client.storeitem') }}" method="post" enctype="multipart/form-data">
+    @csrf
+    <div>
+        <label for="iname">Name</label>
+        <input type="text" placeholder="iname" name="iname">
+    </div>
+
+    <div>
+        <label for="price">Price</label>
+        <input type="text" placeholder="price" name="price">
+    </div>
+
+
+  
+
+    <div>
+        <label for="itemsite">itemsite</label>
+        <input type="text" placeholder="itemsite" name="itemsite">
+    </div>
+
+    <div>
+        <label for="description">description</label>
+        <input type="text" placeholder="description" name="description">
+    </div>
+    <input type="file" name="image">
+    <button type="submit">Upload</button>
 </form>
+
+
+
+
+
 <br>
 <p>teeeeeest</p>
 

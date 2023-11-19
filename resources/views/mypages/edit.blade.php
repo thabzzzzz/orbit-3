@@ -5,7 +5,7 @@
 
     
     <h1>Edit an item</h1>
-    <form method="post" action="{{route('item.update', ['item'=>$item])}}">
+    <form method="post" action="{{route('item.update', ['item'=>$item])}}" enctype="multipart/form-data">
         @csrf
         @method('put')
       
@@ -20,10 +20,10 @@
             <input type="text" placeholder="price" name="price" value="{{$item->price}}">
         </div>
 
-        <div>
+       {{--  <div>
             <label for="itemimage">Item image</label>
             <input type="text" placeholder="itemimage" name="itemimage" value="{{$item->itemimage}}">
-        </div>
+        </div> --}}
 
       
 
@@ -36,9 +36,9 @@
             <label for="description">Description</label>
             <input type="text" placeholder="description" name="description" value="{{$item->description}}">
         </div>
-
-      
-
+        <div>
+        <input type="file" name="image">
+        </div>
         <div>
             <input type="submit" value="Update">
         </div>

@@ -16,7 +16,7 @@ font-size: 20px;
 
 
   .slash:before{
-      content: " / ";
+      content: " \00a0   / ";
       position: absolute;
       right: 0;
       top : 10px;
@@ -31,3 +31,11 @@ font-size: 20px;
     margin-bottom: 60px;
 }
  
+.card-price{
+  font-weight: bold;
+  float: right;
+}
+
+.card{
+  background-color: rgb(143, 143, 101);
+}

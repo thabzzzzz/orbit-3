@@ -15,9 +15,9 @@ class ClientController extends Controller
     public function index(){
         $clients=Client::all();
         $items=Item::where('client', Auth::user()->name )->get();;
-
-
-        return view('mypages.index',['clients'=>$clients],['items'=>$items]); //local page file path + pass clients sql rows to loop over in html page
+        $itemsprice=Item::where('client', Auth::user()->name )->sum('price');
+        
+        return view('mypages.index',['clients'=>$clients],['items'=>$items,'itemsprice'=>$itemsprice]); //local page file path + pass clients sql rows to loop over in html page
        
     }
 

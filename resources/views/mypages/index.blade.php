@@ -29,7 +29,8 @@
         </table>
         <hr class="style-two">
        
-        <div><a href="{{route('client.createitem')}}">Create new item</a></div>
+        <div><a href="{{route('client.createitem')}}">Create new item</a> <span><strong>Total: {{$itemsprice}}</strong></span></div>
+        <div class="row">
         <table class="table">
             <tr>
                 <th>ID</th>
@@ -59,10 +60,31 @@
                        </form>
                     </td>
 
-                </tr>    
+                </tr>   
+                <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="uploads/{{$item->itemimage}}" class="card-img-top" alt="product image">
+                    <div class="card-body">
+                      <h5 class="card-title">{{$item->iname}}</h5>
+                      <p class="card-text">{{$item->description}}</p>
+                      <a href="{{$item->itemsite}}" class="btn btn-primary" target="_blank">Site</a><span  class="card-price">R {{$item->price}}</span>
+                      
+                      <div>
+                        <a href="{{route('item.edit',['item'=>$item])}}"><button>Edit</button></a> 
+                        <span> <form method="post" action="{{route('item.destroy',['item'=>$item])}}">
+                            @csrf
+                            @method('delete')
+                            <input type="submit" value="delete">
+                           </form></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
             @endforeach
            
         </table>
+        </div>
 
     </div>
 </div>

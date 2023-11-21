@@ -3,9 +3,15 @@
     src: url(../fonts/poppins.ttf);
   }
 
+  @font-face {
+    font-family: opensans;
+    src: url(../fonts/open-sans.ttf);
+  }
+
+
 .nav-item{
 font-family: poppins;
-font-size: 20px;
+font-size: 17px;
 }
 
 .nav-link {
@@ -15,12 +21,13 @@ font-size: 20px;
   }
 
 
-  .slash:before{
+  .slash::after{
       content: " \00a0   / ";
-      position: absolute;
+      position: relative;
       right: 0;
-      top : 10px;
-      margin-left: 20px;
+      
+      margin-right: 10px;
+      height: 5px;
   }
 
   hr.style-two {
@@ -36,6 +43,25 @@ font-size: 20px;
   float: right;
 }
 
-.card{
-  background-color: rgb(143, 143, 101);
+
+
+.nav-color{
+background-color:  #dbdbd4;
+}
+
+.navbar-brand{
+  
+}
+
+.navbar{
+  border-bottom: 1px solid ;
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+
+.nav-home{
+  font-family: opensans;
+  font-size: 40px;
+  margin-left: 20px;
+  margin-bottom: 0px;
 }

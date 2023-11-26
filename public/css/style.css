@@ -1,3 +1,8 @@
+:root {
+  --background: #f8f5f4;
+ 
+}
+
 @font-face {
     font-family: poppins;
     src: url(../fonts/poppins.ttf);
@@ -7,6 +12,7 @@
     font-family: opensans;
     src: url(../fonts/open-sans.ttf);
   }
+
 
 
 .nav-item{
@@ -46,12 +52,9 @@ font-size: 17px;
 
 
 .nav-color{
-background-color:  #dbdbd4;
+background-color:  var(--background);
 }
 
-.navbar-brand{
-  
-}
 
 .navbar{
   border-bottom: 1px solid ;
@@ -61,7 +64,170 @@ background-color:  #dbdbd4;
 
 .nav-home{
   font-family: opensans;
-  font-size: 40px;
+  font-size: 45px;
   margin-left: 20px;
   margin-bottom: 0px;
+  padding-right: 29px;
+ 
+}
+
+.dropdown-menu {
+  border-radius: 0px;
+  
+}
+
+.login-box {
+  
+  height: auto;
+  background: var(--background);
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.login-card-header{
+  font-family: opensans;
+  text-align: center;
+  border-bottom:1px solid black !important ;
+  font-size: 40px;
+  background-color: var(--background) !important;
+}
+
+.card{
+  border: 1px solid black !important;
+}
+
+input[type="email"],
+input[type="password"],
+select.form-control {
+  background: var(--background);
+  border: none;
+  border-bottom: 1px solid #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: var(--background);
+}
+
+label,.btn{
+  font-family: poppins !important;
+}
+
+.my-btn{
+  border-radius: 0px !important;
+  border:  1px solid black !important;
+  transition-duration: 0.4s;
+  background-color: var(--background);
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.my-btn:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+input[type="checkbox"]:indeterminate + div::after {
+  content: "";
+  height: 4px;
+  width: 60%;
+  left: 20%;
+  top: calc(50% - 2px);
+  position: absolute;
+  background: grey;
+  border-radius: 1px;
+}
+
+.login-center{
+  margin-top: 505px;
+  margin: auto;
+}
+
+
+
+
+div.row:nth-child(1) {
+
+  margin-top: 220px;
+}
+
+.navbar-brand{
+  border-right: 1px solid  black;
+}
+
+body{
+  background-color: var(--background) !important;
+}
+
+.logo-img{
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.intro{
+  text-decoration: none;
+  color: #000000;
+ 
+}
+
+.intro-text{
+  font-size: 170px;
+  font-family: opensans;
+}
+
+.intro-img{
+  width: 355px !important;
+  height: 355px !important;
+}
+
+.arrow {
+	width: 60px;
+	height: 82px;
+	position: absolute; /* don't forget set container to relative */
+	left: 49%;
+	margin-left: 0px;
+	bottom: 5%;
+  z-index:999;
+}
+/* set arrow styles */
+.arrow path {
+	stroke: #000000;
+	stroke-width: 2px;
+	fill: transparent;	
+	animation: down 2s infinite;
+}
+/* arrow keyframe animation */
+@keyframes down{
+0% { opacity:0 }
+25% { opacity:1 }
+75% { opacity:0 }
+100% { opacity:0 }
+}
+/* arrow animation delay */
+.arrow path.a1{	animation-delay:-1s; }
+.arrow path.a2{	animation-delay:-.5s; }
+.arrow path.a3{	animation-delay:0s; }
+
+.popup:hover {
+  cursor: default;
+}
+
+.content-heading{
+  margin-bottom: 20px;
 }

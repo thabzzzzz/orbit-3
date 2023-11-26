@@ -21,8 +21,8 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light  shadow-sm nav-color">
-            <a class="navbar-brand" href="{{ url('/') }}">
-               <p class="nav-home">GENIE</p>
+            <a class="navbar-brand" href="{{ url('client') }}">
+               <p class="nav-home"> <img src="{{ asset('gallery/logo.png') }}" class="logo-img  " alt="">genie</p>
             </a>
             <div class="container">
              
@@ -69,7 +69,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item   " id="dropdownMenuOffset" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}

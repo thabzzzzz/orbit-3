@@ -14,6 +14,8 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -55,10 +57,10 @@
 
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item ">
-                              <a class="nav-link active slash" aria-current="page" href="#">home </a>
+                              <a class="nav-link active slash" aria-current="page" href="#">HOME </a>
                             </li>
                             <li class="nav-item ">
-                              <a class="nav-link slash" href="#">link</a>
+                              <a class="nav-link slash" href="#">LINK</a>
                             </li>
                          
                            

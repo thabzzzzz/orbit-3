@@ -231,3 +231,58 @@ body{
 .content-heading{
   margin-bottom: 20px;
 }
+
+
+
+
+
+
+
+.cards-row {
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.description-text{
+  margin-bottom: 10px;
+}
+
+.card-img-top{
+  height: 310px;
+}
+
+.product-card{
+  margin-bottom: 30px;
+}
+
+.add-item-text{
+  text-decoration: none;
+  color: #000000;
+  font-size: 40px;
+}
+
+
+
+.my-btn-2{
+  border-radius: 0px !important;
+  border:  1px solid black !important;
+  transition-duration: 0.4s;
+  background-color: var(--background);
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.my-btn-2:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.item-delete {
+  padding: .2rem .3rem;
+  position: absolute;
+  
+  top: 0px;
+  right: 0px;
+  
+  border-radius: 50%;
+}

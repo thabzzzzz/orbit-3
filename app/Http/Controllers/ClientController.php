@@ -121,7 +121,7 @@ class ClientController extends Controller
 
         $item->itemimage =$imageName;
         $item->save();
-        return redirect()->back()->with('success', 'Data uploaded successfully!');
+        return  redirect()->back()->with('message', 'Item created!');;
     }
 
     // Handle if no image file was found in the request

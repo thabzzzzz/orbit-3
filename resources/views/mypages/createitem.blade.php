@@ -76,8 +76,8 @@
         <label for="description">description</label>
         <input type="text" placeholder="description" name="description">
     </div>
-    <input type="file" name="image">
-    <button type="submit">Upload</button>
+    <input type="file" name="image" >
+    <button type="submit" class="my-btn">Upload</button>
 </form>
 
 
@@ -85,7 +85,7 @@
 
 
 <br>
-<p>teeeeeest</p>
+
 
 <a href="/client"><p>Back to home</p></a>
 

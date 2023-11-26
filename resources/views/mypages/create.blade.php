@@ -41,7 +41,8 @@
         </div>
 
         <div>
-            <input type="submit" value="upload">
+            <input type="submit" value="upload" class="my-btn btn">
+         <button></button>
         </div>
     </form>
 

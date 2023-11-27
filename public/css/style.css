@@ -163,6 +163,7 @@ div.row:nth-child(1) {
 
 body{
   background-color: var(--background) !important;
+  min-height: 100vh;
 }
 
 .logo-img{
@@ -306,7 +307,10 @@ body{
       
 }
 
-.footer{
+.footer {
+  
+  position: absolute;
   bottom: 0;
-}
-
+  width: 100%;
+  height: 2.5rem; }
+  

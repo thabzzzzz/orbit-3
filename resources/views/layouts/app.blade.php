@@ -71,7 +71,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item   " id="dropdownMenuOffset" href="{{ route('logout') }}"
+                                    <a class="dropdown-item  drop-link " id="dropdownMenuOffset" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -80,6 +80,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+                                    <a href="#" class="dropdown-item drop-link">test</a>
                                 </div>
                             </li>
                         @endguest
@@ -91,6 +92,11 @@
         <main class="py-4">
             @yield('content')
         </main>
+    </div>
+    <div class="footer row">
+        <div class="col-4 footer-col-1">g</div>
+        <div class="col-4 footer-col-2">g</div>
+        <div class="col-4 footer-col-3">g</div>
     </div>
 </body>
 </html>

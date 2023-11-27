@@ -10,6 +10,13 @@ $(document).ready(function() {
        $(this).removeClass('shadow-lg');
      }
    );
+   $( ".plus-icon" ).hover(
+    function() {
+      $(this).addClass('bi bi-plus-circle').css('cursor', 'pointer'); 
+    }, function() {
+      $(this).removeClass('bi bi-plus-circle');
+    }
+  );
      
    // document ready  
    });

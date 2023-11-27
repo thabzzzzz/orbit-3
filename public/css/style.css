@@ -253,6 +253,7 @@ body{
 
 .product-card{
   margin-bottom: 30px;
+  
 }
 
 .add-item-text{
@@ -289,4 +290,8 @@ body{
 
 .footer-col-1, .footer-col-2{
   border-right:1px solid black  ;
+}
+
+.card-body{
+  border-top:1px solid black;
 }

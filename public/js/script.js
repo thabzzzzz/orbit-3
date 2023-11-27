@@ -1,14 +1,15 @@
-let intro = document.querySelector('.intro');
-let logo = document.querySelector('.logo-header');
-let logoSpan = document.querySelectorAll('.logo');
-
-window.addEventListener('DOMContentLoaded',()=>{
-    setTimeout(()=>{
-        logoSpan.forEach((span,idx)=>
-        {
-            span.classList.add('active')
-        }
-        )
-    }
-    )
-})
+$(document).ready(function() {
+    // executes when HTML-Document is loaded and DOM is ready
+   console.log("document is ready");
+     
+   
+     $( ".card" ).hover(
+     function() {
+       $(this).addClass('shadow-lg').css('cursor', 'pointer'); 
+     }, function() {
+       $(this).removeClass('shadow-lg');
+     }
+   );
+     
+   // document ready  
+   });

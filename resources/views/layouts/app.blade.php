@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -95,9 +96,5 @@
     </div>
    
 </body>
-<div class="footer row">
-    <div class="col-4 footer-col-1">g</div>
-    <div class="col-4 footer-col-2">g</div>
-    <div class="col-4 footer-col-3">g</div>
-</div>
+@include('mypages.my-footer')
 </html>

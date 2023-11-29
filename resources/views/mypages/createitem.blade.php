@@ -76,7 +76,7 @@
         <label for="description">description</label>
         <input type="text" placeholder="description" name="description">
     </div>
-    <input type="file" name="image" >
+    <input type="file" name="image" ><br><br>
     <button type="submit" class="my-btn">Upload</button>
 </form>
 
@@ -104,5 +104,6 @@
 </ul>
 @endif
 </div>
+@include('mypages.my-footer')
   </div>
   @endsection

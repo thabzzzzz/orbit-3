@@ -38,9 +38,9 @@
         </div>
         <div>
         <input type="file" name="image">
-        </div>
+        </div><br><br>
         <div>
-            <input type="submit" value="Update">
+            <button type="submit" class="my-btn">Upload</button>
         </div>
     </form>
 
@@ -61,5 +61,6 @@
     </ul>
     @endif
     </div>
+    @include('mypages.my-footer')
 </div>
     @endsection

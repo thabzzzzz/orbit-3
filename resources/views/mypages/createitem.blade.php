@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>orbit</title>
-  
-</head>
-<body>
+
 
   @extends('layouts.app')
   
@@ -17,50 +8,17 @@
 <h1>Create item</h1>
 
 
-{{-- <form method="post" action="{{route('client.storeitem')}}" enctype="multipart/form-data">
-    @csrf
-    @method('post')
 
-   
-
-   
-
-    <div>
-        <label for="price">Price</label>
-        <input type="text" placeholder="price" name="price">
-    </div>
-
-
-  
-
-    <div>
-        <label for="itemsite">itemsite</label>
-        <input type="text" placeholder="itemsite" name="itemsite">
-    </div>
-
-    <div>
-        <label for="description">description</label>
-        <input type="text" placeholder="description" name="description">
-    </div>
-
-    <label for="avatar">Choose a profile picture:</label>
-
-<input type="file" id="image" name="itemimage"  />
-
-    <div>
-        <input type="submit" value="upload">
-    </div>
-</form> --}}
 
 <form class="w-px-500 p-3 p-md-3" action="{{ route('client.storeitem') }}" method="post" enctype="multipart/form-data">
     @csrf
     <div>
-        <label for="iname">Name</label>
+        <label for="iname">Name:</label>
         <input type="text" placeholder="iname" name="iname">
     </div>
 
     <div>
-        <label for="price">Price</label>
+        <label for="price">Price:</label>
         <input type="text" placeholder="price" name="price">
     </div>
 
@@ -68,14 +26,15 @@
   
 
     <div>
-        <label for="itemsite">itemsite</label>
+        <label for="itemsite">Website:</label>
         <input type="text" placeholder="itemsite" name="itemsite">
     </div>
 
     <div>
-        <label for="description">description</label>
+        <label for="description">Description:</label>
         <input type="text" placeholder="description" name="description">
     </div>
+    <br>
     <input type="file" name="image" ><br><br>
     <button type="submit" class="my-btn">Upload</button>
 </form>
@@ -87,7 +46,8 @@
 <br>
 
 
-<a href="/client"><p>Back to home</p></a>
+<a href="/client "  class="back-text"><i class="bi bi-arrow-left-circle-fill back-icon"></i></a>
+
 
 @if(session()->has('message'))
 <div class="alert alert-success">
@@ -104,6 +64,11 @@
 </ul>
 @endif
 </div>
-@include('mypages.my-footer')
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="{{asset('js/script.js')}}">
+
+
+    </script>
   </div>
   @endsection

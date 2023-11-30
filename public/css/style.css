@@ -98,6 +98,7 @@ background-color:  var(--background);
 
 input[type="email"],
 input[type="password"],
+input[type="text"],
 select.form-control {
   background: var(--background);
   border: none;
@@ -261,7 +262,7 @@ body{
   
 }
 
-.add-item-text{
+.add-item-text,.back-text{
   text-decoration: none;
   color: #000000;
   font-size: 40px;
@@ -308,9 +309,10 @@ body{
 }
 
 .footer {
+  margin-top: 20px;
   padding-top: 20px;
   border-top:1px solid black  ;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   font-size: 23px;
@@ -323,4 +325,12 @@ body{
   height: 30px;
 }
 
+input[type="text"], textarea {
+  outline: none;
+  box-shadow:none !important;
+  }
+
+  #app{
+    min-height: 85vh;
+  }
   

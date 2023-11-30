@@ -47,5 +47,5 @@
     <script src="js/script.js"></script>
 
 </div>
-@include('mypages.my-footer')
+
     @endsection

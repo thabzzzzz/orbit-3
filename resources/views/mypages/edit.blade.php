@@ -29,13 +29,14 @@
 
         <div>
             <label for="itemsite">Item site</label>
-            <input type="text" placeholder="itemsite" name="itemsite" value="{{$item->itemsite}}">
+            <input type="text" placeholder="itemsite" name="itemsite" value="{{$item->itemsite}}" >
         </div>
 
         <div>
             <label for="description">Description</label>
             <input type="text" placeholder="description" name="description" value="{{$item->description}}">
         </div>
+        <br>
         <div>
         <input type="file" name="image">
         </div><br><br>
@@ -44,7 +45,7 @@
         </div>
     </form>
 
-    <a href="/client"><p>Back to home</p></a>
+    <a href="/client "  class="back-text"><i class="bi bi-arrow-left-circle-fill back-icon"></i></a>
 
     @if(session()->has('message'))
     <div class="alert alert-success">
@@ -61,6 +62,9 @@
     </ul>
     @endif
     </div>
-    @include('mypages.my-footer')
+    
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="{{asset('js/script.js')}}"></script>
+
 </div>
     @endsection

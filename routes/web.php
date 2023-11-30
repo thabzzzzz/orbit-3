@@ -14,7 +14,7 @@ use App\Http\Controllers\ClientController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/start', function () {
     return view('welcome');
 });
 

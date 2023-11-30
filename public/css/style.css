@@ -333,4 +333,8 @@ input[type="text"], textarea {
   #app{
     min-height: 85vh;
   }
+
+  .filter{
+    float: right;
+  }
   

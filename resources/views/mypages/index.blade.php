@@ -4,7 +4,7 @@
     
 <div class="container">
     <h1 class="content-heading">Your wishlist</h1>
-    
+    <span class="filter"><button id="name-sort">Sort by: Name</button><i class="bi bi-search"></i><input type="text" id="productSearch" placeholder="Search"></span>
     <div>
       
        
@@ -42,9 +42,40 @@
         </div>
         
     </div>
-    
+   
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script>
+$('#productSearch').on('keyup', function() {
+            var searchText = $(this).val().toLowerCase();
+
+            $('.product-card').each(function() {
+                var cardText = $(this).text().toLowerCase();
+                var parentCard = $(this).closest('.col-4');
+
+                if (cardText.indexOf(searchText) !== -1) {
+                    parentCard.show(); // Show the card if it contains the search text
+                } else {
+                    parentCard.hide(); // Hide the card if it doesn't contain the search text
+                }
+            });
+        });
+
+
+//filter button
+$('#name-sort').on('click', function() {
+            var cards = $('.product-card').toArray();
+
+            cards.sort(function(a, b) {
+                var cardTextA = $(a).text().toLowerCase().trim();
+                var cardTextB = $(b).text().toLowerCase().trim();
+
+                return cardTextA.localeCompare(cardTextB);
+            });
+
+            $('.cards-row').empty().append(cards);
+        });
+</script>  
 
 </div>
 

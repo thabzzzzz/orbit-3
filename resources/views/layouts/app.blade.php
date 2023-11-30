@@ -103,7 +103,7 @@
 </body>
 
 
-@if(Request::is('start'))
+@if(Request::is('/'))
 
 @elseif (Request::is('login'))
   

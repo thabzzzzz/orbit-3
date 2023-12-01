@@ -4,36 +4,33 @@
     <div class="container">
 
     
-    <h1>Edit an item</h1>
-    <form method="post" action="{{route('item.update', ['item'=>$item])}}" enctype="multipart/form-data">
+    <h1 class="create-item-text">edit an item</h1>
+    <form method="post" action="{{route('item.update', ['item'=>$item])}}" enctype="multipart/form-data" class="create-item-form shadow">
         @csrf
         @method('put')
       
 
         <div>
-            <label for="iname">Name</label>
+            <label for="iname">Name: </label>
             <input type="text" placeholder="name" name="iname" value="{{$item->iname}}">
         </div>
-
+        <br>
         <div>
-            <label for="price">Price</label>
+            <label for="price">Price: </label>
             <input type="text" placeholder="price" name="price" value="{{$item->price}}">
         </div>
 
-       {{--  <div>
-            <label for="itemimage">Item image</label>
-            <input type="text" placeholder="itemimage" name="itemimage" value="{{$item->itemimage}}">
-        </div> --}}
-
+     
+        <br>
       
 
         <div>
-            <label for="itemsite">Item site</label>
+            <label for="itemsite">Item site: </label>
             <input type="text" placeholder="itemsite" name="itemsite" value="{{$item->itemsite}}" >
         </div>
-
+        <br>
         <div>
-            <label for="description">Description</label>
+            <label for="description">Description: </label>
             <input type="text" placeholder="description" name="description" value="{{$item->description}}">
         </div>
         <br>
@@ -41,7 +38,7 @@
         <input type="file" name="image">
         </div><br><br>
         <div>
-            <button type="submit" class="my-btn">Upload</button>
+            <button type="submit" class="my-btn upload-btn">Upload</button>
         </div>
     </form>
 

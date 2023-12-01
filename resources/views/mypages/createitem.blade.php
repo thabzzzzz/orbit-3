@@ -5,38 +5,38 @@
   @section('content')
   
   <div class="container">
-<h1>Create item</h1>
+<h1 class="create-item-text">create item</h1>
 
 
 
 
-<form class="w-px-500 p-3 p-md-3" action="{{ route('client.storeitem') }}" method="post" enctype="multipart/form-data">
+<form class="create-item-form shadow" action="{{ route('client.storeitem') }}" method="post" enctype="multipart/form-data" >
     @csrf
     <div>
         <label for="iname">Name:</label>
-        <input type="text" placeholder="iname" name="iname">
+        <input type="text"  name="iname">
     </div>
-
+<br>
     <div>
         <label for="price">Price:</label>
-        <input type="text" placeholder="price" name="price">
+        <input type="text"  name="price">
     </div>
 
 
-  
+    <br>
 
     <div>
         <label for="itemsite">Website:</label>
-        <input type="text" placeholder="itemsite" name="itemsite">
+        <input type="text"  name="itemsite">
     </div>
-
+    <br>
     <div>
         <label for="description">Description:</label>
-        <input type="text" placeholder="description" name="description">
+        <input type="text"  name="description">
     </div>
     <br>
     <input type="file" name="image" ><br><br>
-    <button type="submit" class="my-btn">Upload</button>
+    <button type="submit" class="my-btn upload-btn">Upload</button>
 </form>
 
 

@@ -232,6 +232,7 @@ body{
 
 .content-heading{
   margin-bottom: 20px;
+  font-family: opensans;
 }
 
 
@@ -338,3 +339,23 @@ input[type="text"], textarea {
     float: right;
   }
   
+  .dropdown-menu-end {
+    border-radius: 0 !important;
+    background-color: var(--background) !important;
+}
+
+.create-item-text{
+  font-family: opensans;
+  margin-bottom: 50px;
+}
+
+.upload-btn{
+  width: 60px;
+  height: 40px;
+}
+
+.create-item-form{
+  padding: 10px;
+  border:1px solid black  ;
+  text-align: center;
+}

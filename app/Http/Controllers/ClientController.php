@@ -47,42 +47,9 @@ class ClientController extends Controller
 
     public function storeitem(Request $request){
         
-     /*    $this->validate(request(), [
-            
-            'iname'=>'required',
-            'price'=>'required|decimal:0,2',
-            
-            'itemsite'=>'required',
-            'description'=>'required',
-            
-        ]); */
+  
         
-      /*   $item = new Item;
-        
-        $item->client = Auth::user()->name ;
-        $item->iname = request('iname');
-        $item->price = request('price');
-        
-        $item->itemsite = request('itemsite');
-        $item->description = request('description');
-        
-        
-     
-       
-            $item->itemimage = 'none'; */
-        
-         
-           
-      
-            
-        //$item->save();
-
-
-
-      
-        
-        
-       /*  return redirect()->back()->with('message', 'Item added to list'); */
+  
 
 
          // Validate the request - ensure it's an image and meets any other criteria
@@ -99,17 +66,13 @@ class ClientController extends Controller
 
 
 
-        // Generate a unique name for the file to prevent collisions
+     
         $imageName = time() . '_' . $image->getClientOriginalName();
 
-        // Move the file to the desired directory within the public folder
+        
         $image->move(public_path('uploads'), $imageName);
 
-        // Optionally, you can save the $imageName and $name in the database
-        // For example, if you have a 'data' table with 'name' and 'image_path' columns
-        // Data::create(['name' => $name, 'image_path' => $imageName]);
-
-        // You can also return a success message or redirect somewhere
+      
         $item = new Item;
         $item->iname=request('iname');
         $item->client = Auth::user()->name ;

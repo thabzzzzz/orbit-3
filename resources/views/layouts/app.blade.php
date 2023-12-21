@@ -66,9 +66,7 @@
                             <li class="nav-item ">
                               <a class="nav-link active slash" aria-current="page" href="#">HOME </a>
                             </li>
-                            <li class="nav-item ">
-                              <a class="nav-link slash" href="#">LINK</a>
-                            </li>
+                           
                          
                            
                           </ul>

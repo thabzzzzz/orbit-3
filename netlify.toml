@@ -1,0 +1,3 @@
+[build]
+  command = "echo 'No build needed'"  # Skip the build step since Laravel is pre-compiled
+  publish = "public"  # Specify the directory to deploy, often 'public' for Laravel

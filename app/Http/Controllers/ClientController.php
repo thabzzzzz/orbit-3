@@ -99,29 +99,31 @@ class ClientController extends Controller
 
 
 
-    public function update(Item $item, Request $request){
-        $data = new Item;
+    public function update(Item $item, Request $request)
+    {
         $data = $request->validate([
-
-            'iname'=>'',
-            'price'=>'numeric',
-            
-            'itemsite'=>'',
-            'description'=>'',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
-
+            'iname' => '',
+            'price' => 'numeric',
+            'itemsite' => '',
+            'description' => '',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-       
-
-        // Move the file to the desired directory within the public folder
-        $image = $request->file('image');
-        $imageName = time() . '_' . $image->getClientOriginalName();
-        $image->move(public_path('uploads'), $imageName);
-        $data['itemimage'] =$imageName;
+    
+        if ($request->hasFile('image')) {
+            
+            $image = $request->file('image');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->move(public_path('uploads'), $imageName);
+    
+            
+            $data['itemimage'] = $imageName;
+        }
+    
         $item->update($data);
-        
+    
         return redirect()->back()->with('message', 'Item updated');
     }
+    
 
     public function destroy(Item $item){
         $item->delete();

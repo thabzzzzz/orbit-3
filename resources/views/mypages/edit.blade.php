@@ -38,7 +38,7 @@
         <input type="file" name="image">
         </div><br><br>
         <div>
-            <button type="submit" class="my-btn upload-btn">Upload</button>
+            <button type="submit" class="my-btn upload-btn">Update</button>
         </div>
     </form>
 
